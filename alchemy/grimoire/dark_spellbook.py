@@ -9,5 +9,5 @@ def dark_spell_record(spell_name: str, ingredients: str) -> str:
     response = validate_ingredients(ingredients=ingredients)
     if response.endswith("VALID"):
         return f"Spell recorded: {spell_name} ({response})"
-    elif response.endswith("INVALID"):
+    else:
         return f"Spell rejected: {spell_name} ({response})"
